@@ -1,7 +1,8 @@
 # Santander Spring Boot dio
 
 
-
+## DIAGRAMA DE CLASSE
+``` mermaid
 classDiagram
 class Usuario {
 - name: String
@@ -33,3 +34,4 @@ Usuario "1" *-- "1" Conta
 Usuario "1" *-- "N" Recurso
 Usuario "1" *-- "1" Cartao
 Usuario "1" *-- "N" Noticia
+```

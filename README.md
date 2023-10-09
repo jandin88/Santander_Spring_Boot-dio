@@ -4,34 +4,34 @@
 ## DIAGRAMA DE CLASSE
 ``` mermaid
 classDiagram
-class Usuario {
+class User {
 - name: String
 - account: Conta
 - features: Recurso[]
 - card: Cartao
 - news: Noticia[]
 }
-class Conta {
+class Account {
 - number: String
 - agency: String
 - balance: Float
 - limit: Float
 }
-class Recurso {
+class Feature {
 - icon: String
 - description: String
 }
-class Cartao {
+class Card {
 - number: String
 - limit: Float
 }
-class Noticia {
+class News {
 - icon: String
 - description: String
 }
 
-Usuario "1" *-- "1" Conta
-Usuario "1" *-- "N" Recurso
-Usuario "1" *-- "1" Cartao
-Usuario "1" *-- "N" Noticia
+User "1" *-- "1" Account
+User "1" *-- "N" Feature
+User "1" *-- "1" Card
+User "1" *-- "N" News
 ```

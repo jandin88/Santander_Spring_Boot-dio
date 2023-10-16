@@ -18,11 +18,20 @@ public class UserController {
         this.service = service;
     }
 
+    @GetMapping("/findAll")
+    public ResponseEntity<Iterable<Users>> findAll(){
+        return ResponseEntity.ok(service.findByAll());
+    }
     @GetMapping("/{id}")
     public ResponseEntity<Users> findById(@PathVariable Long id){
+
         return ResponseEntity.ok(service.findById(id));
     }
 
+    @GetMapping("/name/{name}")
+    public ResponseEntity<Users> findByName(@PathVariable String name){
+        return ResponseEntity.ok(service.findByName(name));
+    }
     @PostMapping
     public ResponseEntity<Users> createUser(@RequestBody Users user){
         var userCreated= service.creatUser(user);
